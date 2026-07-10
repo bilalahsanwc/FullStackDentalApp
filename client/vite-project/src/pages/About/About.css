@@ -1,0 +1,433 @@
+.aboutpage section.aboutsection {
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-black);
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .aboutpage section.aboutsection {
+    min-height: 170vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutpage section.aboutsection {
+    height: 230vh;
+    min-height: max-content;
+    max-height: 250vh;
+  }
+}
+
+.aboutpage .about-content {
+  min-height: 120vh;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  margin-bottom: 5vh;
+}
+
+.aboutpage .aboutsection .about-content p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  max-width: 60vw;
+  word-wrap: break-word;
+  text-align: left;
+  line-height: 2;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  white-space: pre-line;
+}
+
+.aboutpage .about-content h1,
+.aboutpage .meetTeam h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--font-heading);
+  border-bottom: 1px solid var(--light-grey);
+  width: 80%;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 5vh;
+  margin-right: 5vw;
+  color: var(--color-white);
+}
+
+.aboutpage .about-content h1::after,
+.aboutpage .meetTeam h2::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 10px;
+  width: 30%;
+  background-color: var(--light-grey);
+  content: "";
+}
+
+@media (max-width: 768px) {
+  .aboutpage .hero-head {
+    font-size: var(--fs-h1);
+    max-width: 20vw;
+    line-height: 1.25;
+  }
+  .aboutpage .aboutsection .about-content p {
+    max-width: none;
+    text-align: center;
+  }
+}
+
+.aboutpage .meetTeam {
+  background-color: var(--color-black);
+  min-height: 170vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.aboutpage .meetTeam-content {
+  min-height: 170vh;
+  width: 100%;
+  gap: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1092px) {
+  .aboutpage .meetTeam,
+  .aboutpage .meetTeam-content {
+    min-height: 200vh;
+  }
+}
+
+.aboutpage h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.aboutpage h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 30%;
+  background-color: var(--light-grey);
+  height: 10px;
+}
+
+.aboutpage .team-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.team-slider-icon {
+  color: var(--color-white);
+}
+
+@media (max-width: 676px) {
+  .aboutpage .about-content h1,
+  .aboutpage .meetTeam h2 {
+    font-size: var(--fs-h3);
+    text-transform: uppercase;
+  }
+
+  .aboutpage .meetTeam,
+  .aboutpage .meetTeam-content {
+    min-height: 250vh;
+    height: max-content;
+  }
+
+  .aboutpage .team-slider {
+    height: 100%;
+    width: 100%;
+    min-height: max-content;
+    padding: 10vh 0;
+  }
+}
+
+.aboutpage .moreAboutUs {
+  min-height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+.aboutpage .moreAboutUs-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+  border-top: 1px solid var(--color-grey);
+  width: 85%;
+  height: 100%;
+  gap: 1vw;
+}
+
+.aboutpage .moreAboutUs-content img {
+  min-height: 90vh;
+  object-fit: cover;
+  width: 25vw;
+  flex: 3;
+}
+
+.moreAboutUs-c2 {
+  flex: 7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vw;
+}
+
+.moreAboutUs-btncontainer {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .moreAboutUs-c2 {
+    flex-direction: column;
+    gap: 10vh;
+    height: 80%;
+  }
+  .moreAboutUs-btncontainer {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreAboutUs-component p {
+    width: 50vw;
+    word-wrap: break-word;
+  }
+}
+
+.moreAboutUs-btncontainer button {
+  all: unset;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--body);
+  border-bottom: 1px solid var(--color-white);
+  padding: 15px 0;
+  color: var(--color-white);
+  background: none;
+  box-shadow: none;
+  min-width: 15vw;
+  text-align: center;
+}
+.moreAboutUs-btncontainer button:hover {
+  cursor: pointer;
+}
+.moreAboutUs-btncontainer button.moreAboutUs-topbtn {
+  border-top: 1px solid var(--color-white);
+}
+
+@media (max-width: 992px) {
+  .moreAboutUs-btncontainer button.moreAboutUs-topbtn {
+    border-top: none;
+  }
+
+  .moreAboutUs-component {
+    min-width: 45vw;
+  }
+}
+@media (max-width: 576px) {
+  .aboutpage .moreAboutUs,
+  .aboutpage .moreAboutUs-content {
+    min-height: 200vh;
+    height: max-content;
+  }
+  .aboutpage .moreAboutUs-content {
+    flex-direction: column;
+    gap: 15vh;
+    border-bottom: 1px solid var(--color-grey);
+    padding-bottom: 15vh;
+  }
+  .aboutpage .moreAboutUs-content > *,
+  .moreAboutUs-component p {
+    min-width: 90%;
+  }
+  .moreAboutUs-c2 > * {
+    min-width: 100%;
+  }
+  .moreAboutUs-c2 .moreAboutUs-component {
+    align-items: center;
+    text-align: center;
+  }
+  .moreAboutUs-btncontainer {
+    justify-content: space-evenly;
+  }
+  .moreAboutUs-c2 .moreAboutUs-component h3 {
+    font-size: var(--fs-large);
+    letter-spacing: 2px;
+  }
+  .aboutpage .moreAboutUs-content img {
+    max-height: 50vh;
+    border-radius: 15px;
+  }
+  .moreAboutUs-c2 {
+    gap: 15vh;
+  }
+  .moreAboutUs-c2 .moreAboutUs-component {
+    gap: 5vh;
+  }
+  .moreAboutUs-component p {
+    width: 100%;
+  }
+}
+
+.images {
+  min-height: 150vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+}
+
+.images-content {
+  min-height: 150vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.imagesContainer {
+  display: flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  gap: 2vw;
+  width: 100%;
+  height: 120vh;
+}
+.imagesContainer img {
+  max-height: 80% !important;
+}
+.sideImage {
+  flex: 1;
+  overflow: hidden;
+}
+.mainImage {
+  flex: 8;
+  overflow: hidden;
+  position: relative;
+}
+
+.sideImage img,
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 676px) {
+  .images,
+  .images-content {
+    min-height: 140vh;
+    max-height: 140vh;
+  }
+  .images-content {
+    justify-content: center;
+    gap: 20vh;
+  }
+  .imagesContainer {
+    height: 90%;
+  }
+  .sideImage img,
+  .mainImage img {
+    max-height: 80%;
+    width: 100%;
+  }
+  .sideImage,
+  .mainImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mainImage .right-icon:hover,
+.mainImage .left-icon:hover {
+  cursor: pointer;
+}
+.mainImage .left-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  z-index: 10;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 50%;
+}
+
+.mainImage .right-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: 10;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 50%;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: transparent;
+  outline: 1.5px solid white;
+}
+@media (max-width: 676px) {
+  .dots {
+    gap: 2vw;
+    margin-bottom: 0;
+  }
+  .mainImage .right-icon,
+  .mainImage .left-icon {
+    display: none;
+  }
+}
+
+.mainImage {
+  touch-action: pan-y;
+}

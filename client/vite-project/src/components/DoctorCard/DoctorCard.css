@@ -1,0 +1,138 @@
+.doctorcard {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background-color: black;
+  color: var(--color-white);
+}
+
+.doctorcard img {
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+}
+
+.doctorcard .teamcard-c2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3vh;
+  padding-left: 3vw;
+  padding-right: 1vw;
+}
+@media (max-width: 1092px) {
+  .doctorcard {
+    height: 150vh;
+  }
+  .doctorcard img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 868px) {
+  .doctorcard {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .doctorcard img {
+    flex: 4;
+    height: 50%;
+    /* margin-bottom: auto;
+    margin-top: 20vh; */
+  }
+  .doctorcard .teamcard-c2 {
+    margin-top: 20vh;
+    margin-bottom: auto;
+    flex: 7;
+  }
+
+  .doctorcard .teamcard-c2 {
+    max-width: 60%;
+  }
+}
+
+.doctorcard .teamcard-c2 .degree {
+  font-size: var(--fs-body);
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.doctorcard .teamcard-c2 .about {
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  font-size: var(--fs-small);
+  color: var(--color-white);
+  letter-spacing: 1px;
+  white-space: pre-line;
+}
+
+.doctorcard .doctor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  width: 100%;
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 5px;
+}
+
+.doctorcard .doctorName {
+  font-family: var(--font-heading);
+  font-weight: var(--bold);
+  color: var(--color-accent);
+  font-size: var(--fs-h4);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (max-width: 676px) {
+  .doctorcard {
+    height: 100%;
+    width: 100%;
+    min-height: max-content;
+    flex-direction: column;
+    padding: 50px 5vw 50px 5vw;
+    gap: 10vh;
+  }
+
+  .doctorcard img {
+    width: 50%;
+    max-height: 50vh;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .doctorcard .teamcard-c2 {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap: 5vh;
+    margin-top: 0;
+  }
+
+  .doctorcard .doctor-info {
+    gap: 1vh;
+  }
+
+  .doctorcard .doctorName {
+    font-size: var(--fs-h5, 1.1rem);
+    letter-spacing: 2px;
+  }
+
+  /* This is the key fix for "flowing out too much vertically" */
+  .doctorcard .about {
+    text-align: left;
+    line-height: 1.6;
+  }
+}

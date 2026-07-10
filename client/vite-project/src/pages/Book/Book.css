@@ -1,0 +1,338 @@
+.bookPage .hero-head {
+  max-width: 100%;
+  word-wrap: break-word;
+  font-size: var(--fs-h1-large);
+  line-height: 1.25;
+}
+.bookAppointment {
+  min-height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 20vh 0;
+}
+
+.short {
+  min-height: unset;
+  height: max-content;
+  max-height: 100vh;
+  padding: 20vh 0;
+}
+
+.hideHeading {
+  display: none;
+}
+
+.bookAppointment .bookAppointment-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10vh;
+  width: 60%;
+  min-height: 170vh;
+}
+.bookPage .bookAppointment form {
+  min-height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7.5vh;
+}
+
+@media (max-width: 992px) {
+  .bookAppointment .bookAppointment-content,
+  .bookAppointment {
+    min-height: 250vh;
+  }
+}
+
+.bookPage .bookAppointment h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .bookPage .hero-head {
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+  }
+  .bookPage .bookAppointment h2 {
+    font-size: var(--fs-h3);
+  }
+  .bookPage .bookAppointment form {
+    gap: 10vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .bookPage .hero-head {
+    font-size: var(--fs-h2);
+  }
+  .bookPage .bookAppointment h2 {
+    font-size: var(--fs-h4);
+  }
+}
+@media (max-width: 576px) {
+  .bookPage .hero-head {
+    font-size: var(--fs-h3);
+  }
+  .bookPage .bookAppointment h2 {
+    font-size: var(--fs-large);
+  }
+}
+@media (max-width: 400px) {
+  .bookPage .hero-head {
+    font-size: var(--fs-h4);
+  }
+  .bookPage .bookAppointment h2 {
+    font-size: var(--fs-body);
+  }
+  .bookAppointment .bookAppointment-content {
+    width: 80%;
+  }
+}
+@media (max-width: 350px) {
+  .bookPage .hero-head {
+    white-space: pre-line;
+    font-size: var(--fs-large);
+    line-height: 1.6;
+  }
+}
+.bookAppointment h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 30%;
+  background-color: var(--light-grey);
+  height: 10px;
+}
+
+.bookAppointment .simpleInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.bookAppointment .simpleInput label,
+.bookAppointment .additional-info label {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--body);
+  color: var(--light-grey);
+}
+
+.bookAppointment .simpleInput input,
+.bookAppointment .additional-info textarea {
+  background-color: transparent;
+  border: 1px solid var(--light-grey);
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-size: var(--fs-body);
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  padding-left: 20px;
+}
+
+.bookAppointment fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.bookAppointment legend {
+  padding: 0;
+}
+.bookAppointment legend,
+.bookAppointment .checkbox-group div label {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: var(--body);
+  color: var(--light-grey);
+}
+
+.bookAppointment .checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  padding: 10px 0 0 0;
+}
+
+.bookAppointment .checkbox-group div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+@media (max-width: 530px) {
+  .bookAppointment .checkbox-group {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .bookAppointment .checkbox-group div {
+    gap: 1vw;
+  }
+}
+
+.bookAppointment .checkbox-group div input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--light-grey);
+  background: transparent;
+  cursor: pointer;
+}
+.bookAppointment .checkbox-group div input[type="checkbox"]:hover {
+  border: 1px solid var(--color-accent);
+}
+
+.bookAppointment .checkbox-group div input[type="checkbox"]:checked {
+  background: var(--color-accent);
+}
+
+.bookAppointment form .formbtn,
+.formbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  font-weight: var(--bold);
+  color: var(--color-black);
+  padding: 10px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.bookAppointment form .formbtn:hover,
+.formbtn:hover {
+  filter: brightness(0.92);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.bookAppointment form .formbtn:active,
+.formbtn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bookAppointment .additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2vh;
+  width: 100%;
+}
+
+.bookAppointment .additional-info label {
+  font-size: var(--fs-body);
+}
+.bookAppointment .additional-info textarea {
+  padding-top: 10px;
+  height: 100px;
+}
+
+.bookAppointment .simpleInput input:hover,
+.simpleInput input:focus,
+.additional-info textarea:hover,
+.additional-info textarea:focus {
+  outline: none;
+  border: 2px solid var(--color-accent);
+}
+
+.appointmentSuccess {
+  width: 100%;
+  /* max-width: 650px; */
+  /* margin: auto; */
+  /* padding: 3rem; */
+  border-radius: 18px;
+  background: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10vh;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.appointmentSuccess h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: var(--bold);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.appointmentSuccess p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--body);
+  max-width: 500px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* .bookAgainBtn {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+} */
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.formbtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}

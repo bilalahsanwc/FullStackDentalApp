@@ -1,0 +1,22 @@
+.heroComponent {
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroComponent span {
+  text-transform: uppercase;
+  max-width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: var(--bold);
+  font-size: var(--fs-extra-large);
+  letter-spacing: 10px;
+  line-height: 1;
+}

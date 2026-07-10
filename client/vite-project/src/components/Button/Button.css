@@ -1,0 +1,63 @@
+.btn-component {
+  max-width: 30vw;
+  display: flex;
+  gap: 2.5vw;
+  align-items: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.btnText {
+  text-decoration: none;
+  margin-left: 15px;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--bold);
+  display: inline;
+}
+
+.btn-component .move-right {
+  background-color: var(--color-grey);
+  color: var(--color-black);
+  height: 100%;
+  margin-left: auto;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .btn-component {
+    max-width: none;
+  }
+}
+.btn-component {
+  transition:
+    filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-component .move-right {
+  transition: transform 0.25s ease;
+}
+
+.btn-component:hover {
+  filter: brightness(0.97);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.btn-component:hover .move-right {
+  transform: translateX(4px);
+}
+
+.btn-component:active {
+  filter: brightness(0.94);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-component:active .move-right {
+  transform: translateX(2px) scale(0.96);
+}
