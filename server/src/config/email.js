@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 import nodemailer from "nodemailer";
+console.log("🔥 TRANSPORTER FILE LOADED");
+
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 console.log(process.env.CLINIC_EMAIL);
