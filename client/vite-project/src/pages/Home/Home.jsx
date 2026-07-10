@@ -3,11 +3,9 @@ import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import CtaComponent from "../../components/CtaComponent/CtaComponent";
+
 import { businessData } from "../../data/businessData";
 import "./Home.css";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
-
 import {
   ChevronLeft,
   ChevronRight,
@@ -17,48 +15,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import TestimonialCard from "../../components/TestimonialCard";
-import ContactForm from "../../components/ContactForm/ContactForm";
-import {
-  fadeRight,
-  fadeIn,
-  fadeUp,
-  fadeLeft,
-  scaleIn,
-} from "../../assets/animation";
-import SEO from "../../components/SEO/SEO";
-
 function Home() {
-  const MotionLink = motion(Link);
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-
-    const distance = touchStart - touchEnd;
-    const minSwipeDistance = 50;
-
-    if (distance > minSwipeDistance) {
-      // Swipe left → next testimonial
-      setTestimonialIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
-    }
-
-    if (distance < -minSwipeDistance) {
-      // Swipe right → previous testimonial
-      setTestimonialIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-    }
-
-    setTouchStart(null);
-    setTouchEnd(null);
-  };
   const testimonials = Object.values(businessData.homepage.testimonials).map(
     (testimonial, i) => (
       <TestimonialCard
@@ -72,46 +29,30 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO
-        title="Loyal Dentistry | Family Dentist"
-        description="Modern family dentistry website offering preventive, cosmetic, and restorative dental care."
-      />
       <div className="hero-wrapper">
         <Header></Header>
         <section className="hero">
           <div className="hero-content">
-            <motion.h1 {...fadeLeft}>
+            <h1>
               <span>{businessData.homepage.hero.heading1}</span>
               <br />
               <span>{businessData.homepage.hero.heading2}</span>
               <br />
               <span>{businessData.homepage.hero.heading3}</span>
-            </motion.h1>
-            <motion.span {...fadeLeft} className="tagline">
+            </h1>
+            <span className="tagline">
               {businessData.homepage.hero.subheading}
-            </motion.span>
-            <Button
-              href="book"
-              animation={fadeLeft}
-              className="homepage-cta"
-              ctaText={businessData.homepage.hero.buttonText}
-            ></Button>
+            </span>
+            <Button ctaText={businessData.homepage.hero.buttonText}></Button>
           </div>
         </section>
       </div>
       <section className="about">
         <div className="about-content">
           <div className="about-c1">
-            <motion.h2 {...fadeLeft}>ABOUT US</motion.h2>
-            <motion.p {...fadeLeft}>
-              {businessData.homepage.clinicInfo.about}
-            </motion.p>
-            <Button
-              href="about"
-              animation={fadeLeft}
-              className="homepage-cta"
-              ctaText={businessData.homepage.clinicInfo.ctaText}
-            ></Button>
+            <h2>ABOUT US</h2>
+            <p>{businessData.homepage.clinicInfo.about}</p>
+            <Button ctaText={businessData.homepage.clinicInfo.ctaText}></Button>
           </div>
           <div className="about-c2">
             <img src={businessData.homepage.clinicInfo.aboutImg} alt="" />
@@ -121,29 +62,21 @@ function Home() {
       <section className="team">
         <div className="team-content">
           <div className="team-content-r1">
-            <motion.span {...fadeUp} className="team-Heading">
-              Meet The Team
-            </motion.span>
+            <span className="team-Heading">Meet The Team</span>
           </div>
           <div className="team-content-r2">
-            <motion.img
-              className="team-content-r2-img"
-              {...scaleIn}
-              src={businessData.homepage.doctors[0].image}
-              alt=""
-            />
-            <div className="team-content-r2-div">
+            <img src={businessData.homepage.doctors[0].image} alt="" />
+            <div>
               <div className="doctor-info">
-                <motion.span {...fadeRight} className="doctorName">
+                <span className="doctorName">
                   {businessData.homepage.doctors[0].name}
-                </motion.span>
-                <motion.span {...fadeRight} className="degree">
+                </span>
+                <br />
+                <span className="degree">
                   {businessData.homepage.doctors[0].credentials}
-                </motion.span>
+                </span>
               </div>
               <Button
-                href="about"
-                animation={fadeUp}
                 className="cta1"
                 ctaText={businessData.homepage.doctors[0].ctaText}
               ></Button>
@@ -154,37 +87,31 @@ function Home() {
       <section className="services">
         <div className="services-content">
           <div className="services-r1">
-            <motion.span {...fadeRight} className="services-heading">
-              OUR SERVICES
-            </motion.span>
-            <MotionLink {...fadeLeft} to="services">
-              VIEW ALL
-            </MotionLink>
+            <span className="services-heading">OUR SERVICES</span>
+            <a href="">VIEW ALL</a>
           </div>
           <div className="services-container">
-            <motion.div {...scaleIn} className="service" id="service1">
-              <span className="service-text">Dental Fillings</span>
+            <div className="service" id="service1">
+              <span className="service-text">GENERAL DENTISTRY</span>
               <MoveRight className="move-right-icon" />
-            </motion.div>
-            <motion.div {...scaleIn} className="service" id="service2">
-              <span className="service-text">Teeth Whitening</span>
+            </div>
+            <div className="service" id="service2">
+              <span className="service-text">COSMETIC DENTISTRY</span>
               <MoveRight className="move-right-icon" />
-            </motion.div>
-            <motion.div {...scaleIn} className="service" id="service3">
-              <span className="service-text">Dentures</span>
+            </div>
+            <div className="service" id="service3">
+              <span className="service-text">LASER DENTISTRY</span>
               <MoveRight className="move-right-icon" />
-            </motion.div>
-            <motion.div {...scaleIn} className="service" id="service4">
-              <span className="service-text">Dental Hygiene</span>
+            </div>
+            <div className="service" id="service4">
+              <span className="service-text">INVISALIGN CLEAR BRACES</span>
               <MoveRight className="move-right-icon" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
-      <motion.section {...fadeUp} className="testimonials">
+      <section className="testimonials">
         <div className="testimonials-content">
-          <h2>What Our Clients Say</h2>
-
           <div className="testimonials-container">
             <ChevronLeft
               style={{ width: "40px", height: "40px" }}
@@ -195,24 +122,9 @@ function Home() {
                 )
               }
             />
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={testimonialIndex}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{
-                  duration: 0.3,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="testimonials-slider"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-              >
-                {testimonials[testimonialIndex]}
-              </motion.div>
-            </AnimatePresence>{" "}
+            <div className="testimonials-slider">
+              {testimonials[testimonialIndex]}
+            </div>
             <ChevronRight
               style={{ width: "40px", height: "40px" }}
               className="testimonials-mover"
@@ -233,10 +145,10 @@ function Home() {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
       <CtaComponent
-        bgImage={businessData.homepage.ctaSection.bgImage}
         h={businessData.homepage.ctaSection.heading}
+        icon={businessData.homepage.ctaSection.icon}
         subH={businessData.homepage.ctaSection.subheading}
         compCtaText={businessData.homepage.ctaSection.CtaText}
       ></CtaComponent>
