@@ -14,12 +14,12 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-transporter.verify((error, success) => {
+transporter.verify((error) => {
   if (error) {
+    console.log("SMTP CONNECTION FAILED");
     console.error(error);
   } else {
-    console.log("Email server is ready");
+    console.log("SMTP CONNECTION SUCCESSFUL");
   }
 });
-
 export default transporter;
