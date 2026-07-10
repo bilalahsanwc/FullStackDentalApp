@@ -37,14 +37,12 @@ function About() {
     const minSwipeDistance = 50;
 
     if (distance > minSwipeDistance) {
-      // Swiped left → next image
       setcurrentImgIndex((prev) =>
         prev === maxImagesIndex - 1 ? 0 : prev + 1,
       );
     }
 
     if (distance < -minSwipeDistance) {
-      // Swiped right → previous image
       setcurrentImgIndex((prev) =>
         prev === 0 ? maxImagesIndex - 1 : prev - 1,
       );
@@ -121,7 +119,7 @@ function About() {
             <ChevronRight
               className="team-slider-icon"
               onClick={() =>
-                setDocIndex((prev) => (prev === maxDocIndex ? 0 : prev + 1))
+                setDocIndex((prev) => (prev === maxDocIndex - 1 ? 0 : prev + 1))
               }
             />
           </div>

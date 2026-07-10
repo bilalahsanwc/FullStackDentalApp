@@ -202,3 +202,7 @@ footer .footer-cta {
   filter: brightness(0.9);
   text-decoration: none;
 }
+
+.footer-c1 a{
+  color: var(--color-white);
+}

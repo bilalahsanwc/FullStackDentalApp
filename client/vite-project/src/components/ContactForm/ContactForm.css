@@ -268,16 +268,3 @@ button:disabled {
 }
 
 
-.btn-component {
-  transition: box-shadow 0.25s ease;
-}
-
-.btn-component .move-right {
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease;
-}
-
-.btn-component:hover .move-right {
-  transform: translateX(4px);
-}

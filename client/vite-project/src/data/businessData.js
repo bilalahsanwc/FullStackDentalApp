@@ -47,8 +47,22 @@ export const businessData = {
         credentials: "D.D.S • Herman Ostrow School of Dentistry",
         detailedBio:
           "Dr. Isabel Kuo received her Doctor of Dental Surgery Degree from the Herman Ostrow School of Dentistry at University of Southern California (USC).  She then continued her education obtaining a General Practice Residency at the Los Amigos National Rehabilitation Center. \n\n Dr. Kuo's training allowed her to work with patients with medical, physical and developmental disabilities.  Her knowledge continued to expand to all types of comprehensive dental care. She is passionate about helping her patients maintain their dental health but also tailors her care depending on the specific needs of her patients.  She is compassionate, kind, knowledgeable and wants to make her patients feel as comfortable as possible.   She deeply adheres to the philosophy of Loyal Dentistry and treats all patients like she would her own family members. \n\n Dr. Kuo keeps up to date with the latest technology, techniques and dental science with top notch continuing education. \n\n During her free time, she enjoys pilates, learning new languages and visiting museums. ",
-        image: "/images/3.png",
+        image: "/images/team1.avif",
         ctaText: "View More",
+      },
+      {
+        name: "Dr. Katie Tsuchiyama",
+        credentials: "D.D.S • UCLA School of Dentistry",
+        detailedBio:
+          "Dr. Katie Tsuchiyama graduated from UCLA School of Dentistry with a Doctor of Dental Surgery degree.  She is passionate about dentistry where she treats her patients with respect, care and complete understanding.   She is dedicated to keeping up with the latest in dental science, technology and improved care by taking top notch continuing education. \n Dr. Tsuchiyama​ has experience in many aspect of dental care including occlusion, restorative, esthetics and pain management. She also works closely with our specialists to make sure that the best care is taken to maintain, improve and educate patients' dental health. \n During her free time, she enjoys pottery and setting up home studios in her patio.  She loves playing with her amazingly large mixed breed cats!",
+        image: "/images/team2.avif",
+      },
+      {
+        name: "Dr. Tiffany La",
+        credentials: "D.D.S • UCSF School of Dentistry",
+        detailedBio:
+          "Dr. Tiffany La graduated from The University of California San Francisco (UCSF) School of Dentistry with a Doctor of Dental Surgery degree.  She continued on to obtain a Certificate in Advanced Education in General Dentistry (AEGD) from St. Vincent De Paul-NYU Langone where she received extensive training in comprehensive dental care. \n Dr. La also had the opportunity to help out at the Sacramento Native American Health Center where she saw patients in that community with complex dental procedures.  She is dedicated to making sure utmost care is taken to provide top notch dental services and believes in working closely with patients to improve their dental health comprehensively.  Her ability to communicate and connect well with her patients is poignantly obvious soon after meeting her. She also keeps up with up to date continuing education.​ \n During her free time, she enjoys spending time with family.",
+        image: "/images/team3.avif",
       },
     ],
     services: [
@@ -150,7 +164,7 @@ Thank you Loyal Dentistry Arcadia"`,
       href: "/book",
       heading: "Found the Right Treatment for You?",
       subHeading:
-        "Whether you need preventive care, cosmetic enhancements, or restorative treatment, our team is here to create a personalized plan that fits your smile and your goals.",
+        "Whether you need preventive care, cosmetic enhancements, or restorative treatment, our team is here to help.",
       bgImage: "/images/services-cta.png",
     },
   },

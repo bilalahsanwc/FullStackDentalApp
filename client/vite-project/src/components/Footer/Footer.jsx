@@ -20,8 +20,20 @@ function Footer({
         <div className="footer-c1">
           <span className="chead cheadClinicName">{clinicName}</span>
           <div>
-            <FaFacebookF />
-            <FaInstagram />
+            <Link
+              to="https://www.facebook.com/LoyalDentistry"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF size={20} />
+            </Link>
+            <Link
+              to="https://www.instagram.com/loyaldentistry/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram size={20} />
+            </Link>
           </div>
           <span className="copyright-container">
             &copy; {year} {clinicName}.
@@ -43,12 +55,12 @@ function Footer({
           </span>
           <div>
             <span className="cbody">
-              <Mail className="cbodyIcon" size={16}></Mail>
+              <Mail className="cbodyIcon" size={20}></Mail>
               {mail}
             </span>
             <br />
             <span className="cbody">
-              <Phone size={16}></Phone> {tel}
+              <Phone size={20}></Phone> {tel}
             </span>
           </div>
         </div>

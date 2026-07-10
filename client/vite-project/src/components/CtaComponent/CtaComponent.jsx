@@ -1,11 +1,20 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./CtaComponent.css";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  fadeLeft,
+  fadeRight,
+  fadeUp,
+  scaleIn,
+} from "../../assets/animation";
+fadeIn;
 function CtaComponent({ h, subH, compCtaText, compHref, bgImage }) {
   return (
     <section
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -15,13 +24,16 @@ function CtaComponent({ h, subH, compCtaText, compHref, bgImage }) {
     >
       <div className="ctaComponent-content">
         <div>
-          <h3>{h}</h3>
-          <span className="subHeading">{subH}</span>
+          <motion.h3 {...fadeLeft}>{h}</motion.h3>
+          <motion.span {...fadeLeft} className="subHeading">
+            {subH}
+          </motion.span>
         </div>
         <Button
+          animation={fadeUp}
           className="ctaCompBtn"
           ctaText={compCtaText}
-          href={compHref}
+          href="/book"
         ></Button>
       </div>
     </section>
