@@ -1,4 +1,32 @@
-import transporter from "../config/email.js";
+import brevo from "@getbrevo/brevo";
+
+const sendEmail = async ({ subject, html }) => {
+  const apiInstance = new brevo.TransactionalEmailsApi();
+
+  apiInstance.setApiKey(
+    brevo.TransactionalEmailsApiApiKeys.apiKey,
+    process.env.BREVO_API_KEY,
+  );
+
+  const email = new brevo.SendSmtpEmail();
+
+  email.sender = {
+    name: "Loyal Dentistry Website",
+    email: process.env.EMAIL_USER,
+  };
+
+  email.to = [
+    {
+      email: process.env.CLINIC_EMAIL,
+    },
+  ];
+
+  email.subject = subject;
+  email.htmlContent = html;
+
+  await apiInstance.sendTransacEmail(email);
+};
+
 export const sendAppointmentEmail = async ({
   firstName,
   lastName,
@@ -8,9 +36,7 @@ export const sendAppointmentEmail = async ({
   preferredTimings,
   additionalInfo,
 }) => {
-  await transporter.sendMail({
-    from: `"Loyal Dentistry Website" <${process.env.EMAIL_USER}>`,
-    to: process.env.CLINIC_EMAIL,
+  await sendEmail({
     subject: "🦷 New Appointment Request",
 
     html: `
@@ -67,14 +93,13 @@ export const sendAppointmentEmail = async ({
 
     </div>
   </div>
-  `,
+
+    `,
   });
 };
 
 export const sendContactEmail = async ({ name, phone, message }) => {
-  await transporter.sendMail({
-    from: `"Loyal Dentistry Website" <${process.env.EMAIL_USER}>`,
-    to: process.env.CLINIC_EMAIL,
+  await sendEmail({
     subject: "📩 New Contact Form Message",
 
     html: `
