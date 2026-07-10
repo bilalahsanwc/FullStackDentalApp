@@ -139,6 +139,9 @@
 .team-slider-icon {
   color: var(--color-white);
 }
+.team-slider-icon:hover {
+  cursor: pointer;
+}
 
 @media (max-width: 676px) {
   .aboutpage .about-content h1,
