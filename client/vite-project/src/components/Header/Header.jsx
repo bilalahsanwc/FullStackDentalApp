@@ -33,13 +33,13 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="services">Services</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link to="about">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="last-li">
-              <Link to="book">Book</Link>
+              <Link to="/book">Book</Link>
             </li>
           </ul>
         </motion.nav>
