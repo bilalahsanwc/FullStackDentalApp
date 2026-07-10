@@ -80,6 +80,10 @@ export const createAppointment = async (req, res) => {
         preferredTimings,
         additionalInfo,
       });
+      console.log("EMAIL USER:", process.env.EMAIL_USER);
+      console.log("EMAIL PASS EXISTS:", !!process.env.EMAIL_PASS);
+      console.log("CLINIC EMAIL:", process.env.CLINIC_EMAIL);
+      console.log("EMAIL SENT SUCCESSFULLY");
     } catch (err) {
       console.error("Email failed:", err);
     }
