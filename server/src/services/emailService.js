@@ -1,36 +1,32 @@
-import {
-  TransactionalEmailsApi,
-  SendSmtpEmail,
-  TransactionalEmailsApiApiKeys,
-} from "@getbrevo/brevo";
-
-const apiInstance = new TransactionalEmailsApi();
-
-apiInstance.setApiKey(
-  TransactionalEmailsApiApiKeys.apiKey,
-  process.env.BREVO_API_KEY
-);
-
 const sendEmail = async ({ subject, html }) => {
-  const email = new SendSmtpEmail();
-
-  email.sender = {
-    name: "Loyal Dentistry Website",
-    email: process.env.EMAIL_USER,
-  };
-
-  email.to = [
-    {
-      email: process.env.CLINIC_EMAIL,
+  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "api-key": process.env.BREVO_API_KEY,
     },
-  ];
+    body: JSON.stringify({
+      sender: {
+        name: "Loyal Dentistry Website",
+        email: process.env.EMAIL_USER,
+      },
 
-  email.subject = subject;
-  email.htmlContent = html;
+      to: [
+        {
+          email: process.env.CLINIC_EMAIL,
+        },
+      ],
 
-  await apiInstance.sendTransacEmail(email);
+      subject,
+      htmlContent: html,
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(await res.text());
+  }
 };
-
 export const sendAppointmentEmail = async ({
   firstName,
   lastName,
