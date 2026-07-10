@@ -47,7 +47,7 @@ export const businessData = {
         credentials: "D.D.S • Herman Ostrow School of Dentistry",
         detailedBio:
           "Dr. Isabel Kuo received her Doctor of Dental Surgery Degree from the Herman Ostrow School of Dentistry at University of Southern California (USC).  She then continued her education obtaining a General Practice Residency at the Los Amigos National Rehabilitation Center. \n\n Dr. Kuo's training allowed her to work with patients with medical, physical and developmental disabilities.  Her knowledge continued to expand to all types of comprehensive dental care. She is passionate about helping her patients maintain their dental health but also tailors her care depending on the specific needs of her patients.  She is compassionate, kind, knowledgeable and wants to make her patients feel as comfortable as possible.   She deeply adheres to the philosophy of Loyal Dentistry and treats all patients like she would her own family members. \n\n Dr. Kuo keeps up to date with the latest technology, techniques and dental science with top notch continuing education. \n\n During her free time, she enjoys pilates, learning new languages and visiting museums. ",
-        image: "/images/team1.avif",
+        image: "/images/team1.png",
         ctaText: "View More",
       },
       {
