@@ -1,4 +1,3 @@
-import transporter from "../config/email.js";
 import Appointment from "../models/Appointment.js";
 import { sendAppointmentEmail } from "../services/emailService.js";
 export const createAppointment = async (req, res) => {
