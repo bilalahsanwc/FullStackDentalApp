@@ -1,14 +1,18 @@
-import brevo from "@getbrevo/brevo";
+import {
+  TransactionalEmailsApi,
+  SendSmtpEmail,
+  TransactionalEmailsApiApiKeys,
+} from "@getbrevo/brevo";
+
+const apiInstance = new TransactionalEmailsApi();
+
+apiInstance.setApiKey(
+  TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY
+);
 
 const sendEmail = async ({ subject, html }) => {
-  const apiInstance = new brevo.TransactionalEmailsApi();
-
-  apiInstance.setApiKey(
-    brevo.TransactionalEmailsApiApiKeys.apiKey,
-    process.env.BREVO_API_KEY,
-  );
-
-  const email = new brevo.SendSmtpEmail();
+  const email = new SendSmtpEmail();
 
   email.sender = {
     name: "Loyal Dentistry Website",
