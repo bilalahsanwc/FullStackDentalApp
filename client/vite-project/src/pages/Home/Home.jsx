@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import CtaComponent from "../../components/CtaComponent/CtaComponent";
-import { businessData } from "../../data/businessData";
+import businessData from "../../data/businessData";
 import "./Home.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -72,10 +72,7 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO
-        title="Loyal Dentistry | Family Dentist"
-        description="Modern family dentistry website offering preventive, cosmetic, and restorative dental care."
-      />
+      <SEO title="Zentooth Endodontics Center" description="" />
       <div className="hero-wrapper">
         <Header></Header>
         <section className="hero">
@@ -163,19 +160,27 @@ function Home() {
           </div>
           <div className="services-container">
             <motion.div {...scaleIn} className="service" id="service1">
-              <span className="service-text">Dental Fillings</span>
+              <span className="service-text">
+                {businessData.servicepage.services[0].title}
+              </span>
               <MoveRight className="move-right-icon" />
             </motion.div>
             <motion.div {...scaleIn} className="service" id="service2">
-              <span className="service-text">Teeth Whitening</span>
+              <span className="service-text">
+                {businessData.servicepage.services[1].title}
+              </span>
               <MoveRight className="move-right-icon" />
             </motion.div>
             <motion.div {...scaleIn} className="service" id="service3">
-              <span className="service-text">Dentures</span>
+              <span className="service-text">
+                {businessData.servicepage.services[2].title}
+              </span>
               <MoveRight className="move-right-icon" />
             </motion.div>
             <motion.div {...scaleIn} className="service" id="service4">
-              <span className="service-text">Dental Hygiene</span>
+              <span className="service-text">
+                {businessData.servicepage.services[3].title}
+              </span>
               <MoveRight className="move-right-icon" />
             </motion.div>
           </div>
@@ -243,7 +248,7 @@ function Home() {
       <section className="map">
         <div className="map-wrapper">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.8275666198406!2d-118.05507682587591!3d34.12516391387905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2db359334da8b%3A0x412e349fddceb219!2sLoyal%20Dentistry%20Arcadia!5e0!3m2!1sen!2s!4v1782337484548!5m2!1sen!2s"
+            src={businessData.Footer.mapSrc}
             width="100%"
             height="500"
             style={{ border: 0 }}

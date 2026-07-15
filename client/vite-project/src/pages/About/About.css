@@ -1,5 +1,6 @@
 .aboutpage section.aboutsection {
   min-height: 120vh;
+  padding: 10vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,8 +178,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15vh;
+  padding: 15vh 0;
   border-top: 1px solid var(--color-grey);
+  border-bottom: 1px solid var(--color-grey);
+
   width: 85%;
   height: 100%;
   gap: 1vw;
@@ -345,6 +348,14 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.sideImage {
+  margin: auto 0;
+}
+
+.mainImage {
+  max-height: 120vh;
 }
 
 @media (max-width: 676px) {

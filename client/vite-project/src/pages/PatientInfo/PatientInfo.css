@@ -1,0 +1,266 @@
+.loyalDentalPlan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 370vh;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 10vh 0;
+}
+
+.loyalDentalPlan-content {
+  min-height: 370vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20vh;
+  padding: 10vh 0;
+}
+
+.loyalDentalPlan-content h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.loyalDentalPlan-content h3 {
+  font-size: var(--fs-h4);
+  color: var(--color-white);
+  max-width: 70vw;
+}
+
+@media (max-width: 992px) {
+  .loyalDentalPlan,
+  .loyalDentalPlan-content {
+    min-height: 400vh;
+  }
+  .loyalDentalPlan-content h3 {
+    font-size: var(--fs-h4);
+    line-height: 1.6;
+    letter-spacing: 2px;
+  }
+}
+
+.loyalDentalPlan-content-p,
+.loyalplan-content-r2-head {
+  font-size: var(--fs-large);
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.loyalDentalPlan ul {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  justify-content: center;
+  gap: 7.5vh;
+}
+
+.loyalDentalPlan-content ul li {
+  list-style-type: square;
+  font-size: var(--fs-body);
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  letter-spacing: 1px;
+}
+
+.loyalplan-content-r2-head {
+  border-bottom: 1px solid var(--color-white);
+  /* margin-top: 20vh; */
+}
+
+.loyalDentalPlan-content h4 {
+  font-family: var(--font-heading);
+  font-weight: var(--bold);
+  font-size: var(--fs-h3);
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 10px;
+  width: 90%;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .loyalDentalPlan-content h4 {
+    padding-bottom: 20px;
+  }
+}
+
+.loyalDentalPlan-content h4::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 30%;
+  height: 6px;
+  content: "";
+  background-color: var(--light-grey);
+}
+
+.loyalDentalPlan-content .loyalPlanListContainer {
+  width: 100%;
+}
+
+.loyalDentalPlan hr {
+  width: 70%;
+  color: var(--color-grey);
+  display: flex;
+  align-self: center;
+  margin: 7.5vh 0;
+}
+
+.loyalPlanListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loyalPlanListContainer-content p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin: 7vh 0;
+  font-size: var(--fs-large);
+  font-family: var(--font-body);
+  font-weight: var(--body);
+  letter-spacing: 1px;
+}
+
+.loyalplan-content-r1,
+.loyalplan-content-r2,
+.loyalplan-content-r3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.loyalplan-content-r3 {
+  gap: 7.5vh;
+}
+.loyalplan-content-r1,
+.loyalplan-content-r2 {
+  gap: 10vh;
+}
+
+@media (max-width: 768px) {
+  .loyalDentalPlanPage .loyalDentalPlan-content-h3 {
+    max-width: none;
+    width: 100%;
+    font-size: var(--fs-large);
+  }
+  .loyalDentalPlanPage .hero-head {
+    font-size: var(--fs-h1-large);
+    line-height: 1.1;
+  }
+  .loyalDentalPlan-content {
+    width: 90%;
+    gap: 20vh;
+    padding-top: 10vh;
+  }
+
+  .loyalplan-content-r1,
+  .loyalplan-content-r2 {
+    width: 100%;
+  }
+  .loyalplan-content-r1 {
+    gap: 20px;
+  }
+
+  .loyalDentalPlan-content-p {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+  }
+  .loyalDentalPlan-content h4 {
+    font-size: var(--fs-h4);
+  }
+
+  .loyalDentalPlan hr {
+    margin: 0;
+    width: 90%;
+  }
+
+  .loyalPlanListContainer-content p {
+    font-size: var(--fs-body);
+    margin: 10vh;
+    line-height: 1.6;
+  }
+  .loyalDentalPlan .loyalDentalPlan-content h4::after {
+    width: 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .loyalplan-content-r1 {
+    gap: 40px;
+  }
+  .loyalDentalPlan,
+  .loyalDentalPlan-content {
+    min-height: 450vh;
+  }
+  .loyalDentalPlan .loyalDentalPlan-content {
+    padding-top: 5vh;
+  }
+  .loyalDentalPlan-content h4 {
+    font-size: var(--fs-large);
+  }
+  .loyalDentalPlanPage .hero-head {
+    font-size: var(--fs-h1);
+    line-height: 1.35;
+  }
+  .loyalDentalPlanPage .loyalDentalPlan-content-h3 {
+    font-size: var(--fs-body);
+    line-height: 2;
+  }
+
+  /* .loyalDentalPlan-content-p {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  } */
+
+  .loyalDentalPlan-content ul li {
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 400px) {
+  .loyalDentalPlanPage .hero-head {
+    font-size: var(--fs-h2);
+    line-height: 1.6;
+  }
+}
+
+.loyalplan-content-r3 {
+  border: 2px solid var(--color-grey);
+  padding: 50px 30px 15px 30px;
+  border-radius: 15px;
+}
+
+@media (max-width: 400px) {
+  .loyalDentalPlan,
+  .loyalDentalPlan-content {
+    min-height: 550vh;
+    height: max-content;
+  }
+  .loyalPlanListContainer-content p {
+    margin: 10vh 0;
+  }
+  .loyalDentalPlan-content h4 {
+    font-size: var(--fs-body);
+    max-width: unset;
+  }
+  .loyalplan-content-r2-head {
+    font-size: var(--fs-body);
+    letter-spacing: 0.5px;
+  }
+}

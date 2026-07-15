@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import HeroComponent from "../../components/HeroComponent/HeroComponent";
-import { businessData } from "../../data/businessData";
+import businessData from "../../data/businessData";
 import ServiceComponent from "../../components/ServiceComponent/ServiceComponent";
 import CtaComponent from "../../components/CtaComponent/CtaComponent";
 import TestimonialCard from "../../components/TestimonialCard";
@@ -47,7 +47,7 @@ function Services() {
   return (
     <div className="servicepage">
       <SEO
-        title="Dental Services | Loyal Dentistry"
+        title="Dental Services"
         description="Explore our comprehensive dental services, including preventive, restorative, and cosmetic treatments."
       />
       <Header></Header>

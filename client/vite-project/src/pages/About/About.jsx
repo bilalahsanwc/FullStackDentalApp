@@ -1,6 +1,6 @@
 import "./About.css";
 import React, { useState } from "react";
-import { businessData } from "../../data/businessData";
+import businessData from "../../data/businessData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import DoctorCard from "../../components/DoctorCard/DoctorCard";
 import MoreAboutUs from "../../components/MoreAboutUs/MoreAboutUs";
@@ -72,8 +72,8 @@ function About() {
   return (
     <div className="aboutpage">
       <SEO
-        title="About Us | Loyal Dentistry"
-        description="Meet the experienced team behind Loyal Dentistry and learn about our commitment to patient care."
+        title="About Us "
+        description="Meet the experienced team learn about our commitment to patient care."
       />
       <Header></Header>
       <HeroComponent
@@ -241,7 +241,7 @@ function About() {
       <section className="map">
         <div className="map-wrapper">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.8275666198406!2d-118.05507682587591!3d34.12516391387905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2db359334da8b%3A0x412e349fddceb219!2sLoyal%20Dentistry%20Arcadia!5e0!3m2!1sen!2s!4v1782337484548!5m2!1sen!2s"
+            src={businessData.Footer.mapSrc}
             width="100%"
             height="500"
             style={{ border: 0 }}

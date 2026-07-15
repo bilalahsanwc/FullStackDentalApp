@@ -13,6 +13,8 @@ function Footer({
   mail,
   tel,
   bookNow,
+  instaLink,
+  fbLink,
 }) {
   return (
     <footer>
@@ -20,18 +22,10 @@ function Footer({
         <div className="footer-c1">
           <span className="chead cheadClinicName">{clinicName}</span>
           <div>
-            <Link
-              to="https://www.facebook.com/LoyalDentistry"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to={instaLink} target="_blank" rel="noopener noreferrer">
               <FaFacebookF size={20} />
             </Link>
-            <Link
-              to="https://www.instagram.com/loyaldentistry/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to={fbLink} target="_blank" rel="noopener noreferrer">
               <FaInstagram size={20} />
             </Link>
           </div>
@@ -78,7 +72,7 @@ function Footer({
                 <Link to="/services">Services</Link>
               </li>
               <li>
-                <Link to="/loyalPlan">Loyal Plan</Link>
+                <Link to="/patientInfo">Patient Information</Link>
               </li>
               <li>
                 <Link to="/book">Contact</Link>

@@ -1,7 +1,7 @@
 import "./Header.css";
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import { businessData } from "../../data/businessData";
+import businessData from "../../data/loyalDental";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeLeft, fadeRight, fadeUp } from "../../assets/animation";
@@ -13,7 +13,6 @@ function Header() {
       <div className="header-content">
         <img src={businessData.homepage.clinicInfo.logo} alt="" />
         <Navbar className="navbar"></Navbar>
-
         <button
           className="header-contact-toggle"
           onClick={() => setIsCloseNav((prev) => !prev)}

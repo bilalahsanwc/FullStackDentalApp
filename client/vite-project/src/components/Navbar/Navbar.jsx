@@ -22,8 +22,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink className="navlink" to="/loyalPlan">
-            The Loyal Plan
+          <NavLink className="navlink" to="/patientInfo">
+            Patient Information
           </NavLink>
         </li>
         <li>

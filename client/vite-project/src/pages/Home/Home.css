@@ -36,7 +36,7 @@
 
 .hero h1 span {
   font-family: var(--font-heading);
-  font-size: var(--fs-h1-large);
+  font-size: var(--fs-h1);
   font-weight: var(--boldest);
   color: var(--color-white);
   text-transform: uppercase;
@@ -284,8 +284,10 @@
   padding-bottom: 15vh;
 }
 
-.homepage .team-content-r2 .team-content-r2-img {
+.homepage .team-content-r2 .team-content-r2-img,
+.homepage .team-content-r2 img {
   height: 100vh;
+  max-width: 60% !important;
 }
 @media (max-width: 576px) {
   .homepage .team-content-r2 .team-content-r2-img {

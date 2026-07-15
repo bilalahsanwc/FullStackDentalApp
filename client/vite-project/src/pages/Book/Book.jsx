@@ -2,7 +2,7 @@ import "./Book.css";
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import HeroComponent from "../../components/HeroComponent/HeroComponent";
-import { businessData } from "../../data/businessData";
+import businessData from "../../data/businessData";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { CircleCheckBig, LoaderCircle } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
@@ -76,8 +76,8 @@ function Book() {
   return (
     <div className="bookPage">
       <SEO
-        title="Book an Appointment | Loyal Dentistry"
-        description="Request an appointment with Loyal Dentistry using our convenient online booking form."
+        title="Book an Appointment"
+        description="Request an appointment using our convenient online booking form."
       />
       <Toaster
         position="top-right"
