@@ -1,7 +1,13 @@
 import React from "react";
 import "./ServiceComponent.css";
 import Button from "../Button/Button";
-import { fadeUp, fadeLeft, fadeRight, scaleIn } from "../../assets/animation";
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+  scaleIn,
+  fadeIn,
+} from "../../assets/animation";
 import { motion } from "framer-motion";
 function ServiceComponent({
   imagePath,
@@ -17,7 +23,7 @@ function ServiceComponent({
     <div className="serviceComponentContainer">
       <div className={`serviceComponent ${reverse ? "reverse" : ""}`}>
         <div className="image-container">
-          <motion.img {...fadeUp} src={imagePath} alt="" />
+          <img src={imagePath} alt="" />
         </div>
         <div className="details-container">
           <div>

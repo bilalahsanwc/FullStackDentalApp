@@ -36,31 +36,31 @@
 
 .hero h1 span {
   font-family: var(--font-heading);
-  font-size: var(--fs-h1);
+  font-size: clamp(1.5rem, 5vw, 6rem);
   font-weight: var(--boldest);
   color: var(--color-white);
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero h1 span {
     font-size: var(--fs-h1);
-  }
-}
+    }
+    }
 @media (max-width: 576px) {
   .hero h1 span {
     font-size: var(--fs-h2);
+    }
+    }
+    @media (max-width: 400px) {
+      .hero h1 span {
+        font-size: var(--fs-h3);
   }
-}
-@media (max-width: 400px) {
-  .hero h1 span {
-    font-size: var(--fs-h3);
-  }
-}
+  } */
 
 .tagline {
   letter-spacing: 1px;
-  font-size: var(--fs-h2);
+  font-size: clamp(1.5rem, 2.5vw, 2.75rem);
   color: var(--color-accent);
   font-family: var(--font-body);
   text-transform: lowercase;
@@ -287,7 +287,8 @@
 .homepage .team-content-r2 .team-content-r2-img,
 .homepage .team-content-r2 img {
   height: 100vh;
-  max-width: 60% !important;
+  max-width: 50%;
+  object-fit: contain;
 }
 @media (max-width: 576px) {
   .homepage .team-content-r2 .team-content-r2-img {
@@ -629,7 +630,7 @@
   font-family: var(--font-body);
   font-weight: var(--body);
   color: var(--color-white);
-  font-size: var(--fs-h4);
+  font-size: clamp(var(--fs-h6), var(--fs-h5), var(--fs-h4));
   width: 80%;
   letter-spacing: 1px;
   line-height: 1.45;

@@ -10,7 +10,7 @@ import SEO from "../../components/SEO/SEO";
 import businessData from "../../data/businessData";
 function PatientInfo() {
   return (
-    <div className="loyalDentalPlanPage">
+    <div className="patientInfoPage">
       <SEO
         title="Patient Information"
         description="Read Patient features added to make quality care more accessible."
@@ -22,7 +22,7 @@ function PatientInfo() {
         heading="Patient Information"
         bgPath={"/clients/zentooth/patientInfo.png"}
       ></HeroComponent>
-      <section className="loyalDentalPlan">
+      <section className="patientInfo">
         <div className="loyalDentalPlan-content">
           <div className="loyalplan-content-r1">
             <motion.h3 {...fadeLeft} className="loyalDentalPlan-content-h3">
