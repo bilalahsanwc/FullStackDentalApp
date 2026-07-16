@@ -1,7 +1,7 @@
 import "./Header.css";
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import businessData from "../../data/loyalDental";
+import businessData from "../../data/businessData";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeLeft, fadeRight, fadeUp } from "../../assets/animation";
