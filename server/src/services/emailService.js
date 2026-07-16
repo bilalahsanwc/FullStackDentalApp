@@ -8,7 +8,7 @@ const sendEmail = async ({ subject, html }) => {
     },
     body: JSON.stringify({
       sender: {
-        name: "Loyal Dentistry Website",
+        name: "Dentistry Website",
         email: process.env.EMAIL_USER,
       },
 
@@ -47,7 +47,7 @@ export const sendAppointmentEmail = async ({
       <div style="background:#0f172a; color:white; padding:20px; text-align:center;">
         <h2 style="margin:0;">New Appointment Request</h2>
         <p style="margin:5px 0 0; font-size:13px; opacity:0.8;">
-          Loyal Dentistry Website
+          Dentistry Website
         </p>
       </div>
 
