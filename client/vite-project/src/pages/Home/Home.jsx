@@ -73,7 +73,19 @@ function Home() {
   return (
     <div className="homepage">
       <SEO title="Zentooth Endodontics Center" description="" />
-      <div className="hero-wrapper">
+      <div
+        className="hero-wrapper"
+        style={{
+          background: `
+      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+      url(${businessData.homepage.hero.bgImg})
+    `,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <Header></Header>
         <section className="hero">
           <div className="hero-content">

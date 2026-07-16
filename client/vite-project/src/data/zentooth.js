@@ -15,6 +15,7 @@ const zentooth = {
       heading3: "Atlanta",
       subheading: "Comfort, Care, and Expertise.",
       buttonText: "Book Appointment",
+      bgImg: "/clients/zentooth/1.png",
     },
     clinicInfo: {
       logo: "/clients/zentooth/logo.png",
@@ -36,7 +37,7 @@ const zentooth = {
         { src: "/clients/zentooth/8.png", alt: "" },
         { src: "/clients/zentooth/9.png", alt: "" },
       ],
-      aboutImg: "/images/2.png",
+      aboutImg: "/clients/zentooth/2.png",
       moreAboutUsImg: "/clients/zentooth/5.png",
     },
     doctors: [
