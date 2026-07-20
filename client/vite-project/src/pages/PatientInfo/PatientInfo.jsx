@@ -1,4 +1,5 @@
 import React from "react";
+
 import Header from "../../components/Header/Header";
 import HeroComponent from "../../components/HeroComponent/HeroComponent";
 import { CircleCheck } from "lucide-react";
@@ -20,19 +21,16 @@ function PatientInfo() {
       <HeroComponent
         animation={scaleIn}
         heading="Patient Information"
-        bgPath={"/clients/zentooth/patientInfo.png"}
+        bgPath={businessData.practiceInfo.heroImg}
       ></HeroComponent>
       <section className="patientInfo">
         <div className="loyalDentalPlan-content">
           <div className="loyalplan-content-r1">
             <motion.h3 {...fadeLeft} className="loyalDentalPlan-content-h3">
-              Convenient, quality dental care in the heart of Atlanta
+              {businessData.practiceInfo.heading}
             </motion.h3>
             <motion.p {...fadeLeft} className="loyalDentalPlan-content-p">
-              Our practice is in full compliance with the standards of infection
-              control advocated by the Office of Safety and Health
-              Administration (OSHA), the American Association of Endodontists
-              (AAE) and the American Dental Association (ADA).
+              {businessData.practiceInfo.subHeading}
             </motion.p>
           </div>
           <div className="loyalplan-content-r2">

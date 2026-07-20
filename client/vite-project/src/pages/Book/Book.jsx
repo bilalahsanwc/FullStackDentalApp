@@ -129,7 +129,7 @@ function Book() {
               <h3>Appointment Request Sent</h3>
 
               <p>
-                Thank you for choosing <strong>Loyal Dentistry</strong>.
+                Thank you for choosing Us.
               </p>
 
               <p>

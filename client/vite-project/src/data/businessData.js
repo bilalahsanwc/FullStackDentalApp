@@ -1,3 +1,3 @@
-import zentooth from "./zentooth.js";
+import dodddental from "./doddDental.js";
 
-export default zentooth;
+export default dodddental;

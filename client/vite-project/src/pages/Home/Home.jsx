@@ -72,7 +72,7 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO title="Zentooth Endodontics Center" description="" />
+      <SEO title="Dodd Dental Beavercreek" description="" />
       <div
         className="hero-wrapper"
         style={{

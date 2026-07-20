@@ -84,7 +84,7 @@ function ContactForm() {
       <Toaster
         position="top-right"
         toastOptions={{
-          duration: 4000,
+          duration: 6000,
           style: {
             background: "#111",
             color: "#fff",
