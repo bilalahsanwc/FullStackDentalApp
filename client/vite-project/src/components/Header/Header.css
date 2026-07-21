@@ -104,6 +104,6 @@ header {
 
 .header-content img {
   filter: brightness(0) invert(1);
-  width: 120px;
+  width: 80px;
   height: auto;
 }

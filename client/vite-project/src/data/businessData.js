@@ -1,3 +1,3 @@
-import dodddental from "./doddDental.js";
+import cranberryfamilydentistry from "./cranberryfamilydentistry.js";
 
-export default dodddental;
+export default cranberryfamilydentistry;
