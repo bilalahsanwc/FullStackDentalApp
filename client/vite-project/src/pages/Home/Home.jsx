@@ -72,7 +72,7 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO title="Cranberry Family Dentistry" description="" />
+      <SEO title="Cranberry Pediatric Dentistry" description="" />
       <div
         className="hero-wrapper"
         style={{
