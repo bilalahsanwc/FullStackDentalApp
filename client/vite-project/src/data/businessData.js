@@ -1,3 +1,3 @@
-import anthonymartin from "./anthonymartin.js";
+import bluedogfamilydentistry from "./bluedogfamilydentistry.js";
 
-export default anthonymartin;
+export default bluedogfamilydentistry;
