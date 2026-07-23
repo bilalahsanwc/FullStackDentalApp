@@ -72,7 +72,7 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO title="Dental Group California" description="" />
+      <SEO title="Anthony Martin DMD Inc" description="" />
       <div
         className="hero-wrapper"
         style={{

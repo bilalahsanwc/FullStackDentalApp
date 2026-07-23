@@ -1,3 +1,3 @@
-import dentalgroupofcalifornia from "./dentalgroupofcalifornia.js";
+import anthonymartin from "./anthonymartin.js";
 
-export default dentalgroupofcalifornia;
+export default anthonymartin;
