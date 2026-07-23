@@ -1,3 +1,3 @@
-import cranberrypediatricdentistry from "./cranberryPediatricDentistry.js";
+import dentalgroupofcalifornia from "./dentalgroupofcalifornia.js";
 
-export default cranberrypediatricdentistry;
+export default dentalgroupofcalifornia;
