@@ -1,3 +1,3 @@
-import bluedogfamilydentistry from "./bluedogfamilydentistry.js";
+import drjackhaney from "./drjackhaney.js";
 
-export default bluedogfamilydentistry;
+export default drjackhaney;

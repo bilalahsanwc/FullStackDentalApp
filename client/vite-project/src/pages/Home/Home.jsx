@@ -72,7 +72,7 @@ function Home() {
   const maxIndex = testimonials.length - 1;
   return (
     <div className="homepage">
-      <SEO title="Blue Dog Family Dentistry" description="" />
+      <SEO title="Jack Haney DDS" description="" />
       <div
         className="hero-wrapper"
         style={{
